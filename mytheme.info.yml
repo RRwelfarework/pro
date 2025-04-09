@@ -1,0 +1,15 @@
+name: 'My Custom Theme'
+type: theme
+description: 'A custom Drupal 10 theme created for FOSSEE Fellowship'
+core_version_requirement: ^10
+package: Custom
+base theme: classy
+libraries:
+  - mytheme/global-styling
+regions:
+  top_banner: 'Top Banner'
+  logo: 'Logo'
+  navigation: 'Navigation Menu'
+  sidebar: 'Left Sidebar'
+  content: 'Content'
+  footer: 'Footer'

@@ -1,0 +1,90 @@
+/* Unique and high-level theme styling */
+
+:root {
+  --primary-color: #14213d;
+  --accent-color: #fca311;
+  --background-light: #e5e5e5;
+  --text-color: #1a1a1a;
+  --radius: 16px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background-color: var(--background-light);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+header, footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-radius: 0 0 var(--radius) var(--radius);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+#logo {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+nav#main-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  gap: 1.5rem;
+}
+
+nav#main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+nav#main-nav a:hover {
+  color: var(--accent-color);
+  transform: scale(1.05);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+#sidebar {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+#main-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+footer {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  nav#main-nav ul {
+    flex-direction: column;
+  }
+}

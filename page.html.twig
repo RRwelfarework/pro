@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head-placeholder token="{{ placeholder_token }}">
+    <title>{{ head_title }}</title>
+    <css-placeholder token="{{ placeholder_token }}">
+    <js-placeholder token="{{ placeholder_token }}">
+  </head>
+  <body>
+    <a href="#main-content" class="visually-hidden focusable skip-link">Skip to main content</a>
+
+    <header role="banner">
+      <div id="top-banner">{{ page.top_banner }}</div>
+      <div id="logo">{{ page.logo }}</div>
+      <nav id="main-nav" role="navigation" aria-label="Main Navigation">
+        {% if page.navigation %}
+          {{ page.navigation }}
+        {% else %}
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        {% endif %}
+      </nav>
+    </header>
+
+    <main id="main-content" role="main">
+      <aside id="sidebar" role="complementary">{{ page.sidebar }}</aside>
+      <section>{{ page.content }}</section>
+    </main>
+
+    <footer role="contentinfo">
+      {{ page.footer }}
+    </footer>
+
+    <js-bottom-placeholder token="{{ placeholder_token }}">
+  </body>
+</html>
